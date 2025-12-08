@@ -292,6 +292,3 @@ Voici ce que je retiens personnellement du LLM vs les sources officielles et com
     * Tester immédiatement les exemples de code pour bien comprendre leur fonctionnement.
     * Noter les points difficiles ou les astuces pour s’y référer plus tard.
     * Passer progressivement à des concepts plus avancés une fois les bases maîtrisées.
-
-
-
