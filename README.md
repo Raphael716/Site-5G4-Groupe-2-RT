@@ -4,11 +4,11 @@ Ce site utilise de le thème relearn. Cette dépendance est mise comme un sous m
 
 `$ git clone --recurse-submodules <url>`
 
-Autrement après un clone simple :
+Ou clonez directement avec les sous-modules :
 
-`$ git submodule init`
-
-`$ git submodule update`
+```bash
+git clone --recurse-submodules <url>
+```
 
 Si vous oubliez cette étape, la commande `$ hugo serve` retournera une erreur.
 

@@ -56,12 +56,22 @@ Si vous préférez ne pas installer Go sur votre machine, nous allons utiliser u
 FROM golang:1.23-alpine
 WORKDIR /app
 # On installe nano pour pouvoir éditer dans le conteneur si besoin, 
-# mais l'idéal est d'éditer en local via le volume.
+# mais l'idéal est d'éditer en local par le volume.
 RUN apk add --no-cache nano git
 CMD ["sh"]
 ``` 
 
  * Construisez l'image et lancez le conteneur en liant votre dossier actuel :
+
+---
+
+## Télécharger l'atelier complet
+
+Vous pouvez télécharger tout le dossier `atelier` (tous les exercices et le `Dockerfile`) en une seule archive ZIP :
+
+- **Fichier** : `/fichiers/atelier-golang.zip`
+
+- **Télécharger** : <a href="/fichiers/atelier-golang.zip" download="atelier-golang.zip">Télécharger l'atelier (ZIP)</a>
 
 ```bash
 # 1. Construction
@@ -84,10 +94,13 @@ Cela va créer un fichier `go.mod`.
 
 ### Partie 1 : Les Fondamentaux
 #### Exercice 1 : Hello World
- 1. Créez un fichier main.go.
+
+**Objectif** : vérifier que ton environnement fonctionne.
+
+ 1. Créez un dossier /ex1_hello et dans ce dossier, crée main.go 
+    **Info** : Faire cela pour chaque exercice masi changer le nom du dossier
  2. Définissez le package main.
  3. Dans la fonction main, affichez "Bonjour le monde !".
- 4. Lancez le programme avec go run main.go.
 
 <details> <summary>=> <strong>Voir la solution</strong></summary>
 
@@ -164,7 +177,7 @@ func main() {
 Les tableaux ont une taille fixe, les slices sont dynamiques. C'est ce qu'on utilise 99% du temps.
  1. Créez un slice d'entiers contenant `[10, 20, 30, 40]`.
  2. Ajoutez la valeur 50 à ce slice (utilisez append).
- 3. Affichez la longueur du slice (`len`).
+ 3. Affichez la longueur du slice (`len`) et la capacité (`cap`).
  4. Affichez le slice complet.
 
 <details> <summary>=> <strong>Voir la solution</strong></summary>
@@ -183,6 +196,7 @@ func main() {
 
     fmt.Println("Contenu :", nombres)
     fmt.Println("Longueur :", len(nombres))
+    fmt.Println("Capacité :", cap(nombres))
 }
 ```
 

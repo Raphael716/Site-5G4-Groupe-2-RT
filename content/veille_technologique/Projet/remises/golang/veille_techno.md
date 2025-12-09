@@ -88,26 +88,21 @@ Si tu veux, je peux :
 La réponse capture bien les changements majeurs des changements dans le language GoLang, mais elle manque certaines nouveautés très récentes (2024-2025), notamment :
 
  - **Go 1.22 (février 2024)** : correction de la capture de variables dans les boucles `for`
- - **Go 1.23 (août 2024)** : itérateurs (`range-over-func`), télémétrie, améliorations diverses
+ - **Go 1.23 (août 2024)** : itérateurs (`range-over-func` : itérateurs personnalisés permettant d'itérer sur des séquences définies par une fonction), télémétrie, améliorations diverses
 
 #### Points forts :
    - Bonne mise en contexte
    - Explications claires
-   - Mention du fuzzing intégré
+   - Mention du fuzzing intégré (tests qui génèrent automatiquement des entrées pour trouver des cas limites)
    - Discussion équilibrée sur la complexité
 
-#### Limitations importantes :
-   * Absence des versions récentes : Aucune mention de Go 1.22 (février 2024) et Go 1.23 (août 2024)
-   * Omission de changements syntaxiques critiques : La correction de la capture des variables dans les boucles for (Go 1.22)
-   * Manque d'actualité sur l'écosystème : Évolutions récentes des outils (gopls, govulncheck)
-   * Perspective pédagogique absente : Comment ces changements affectent l'apprentissage
+#### Faiblesses importantes :
+   * **Absence des versions récentes :** Aucune mention de Go 1.22 (février 2024) et Go 1.23 (août 2024)
+   * **Changements syntaxiques critiques :** La correction de la capture des variables dans les boucles for (Go 1.22)
+   * **Manque d'actualité sur l'écosystème :** Évolutions récentes des outils (gopls, govulncheck)
+   * **Perspective d'apprentissage absente :** Comment ces changements affectent l'apprentissage et le codage
 
-Donc, il manque une vision des changements de 2024-2025 complète.
-
-#### Compléments nécessaires pour un public étudiant :
-   - Impacts concrets sur les projets académiques
-   - Courbe d'apprentissage mise à jour
-   - Ressources pédagogiques adaptées
+Donc, il manque une vision complète des changements de 2024-2025.
 
 ### 2.2 Comparaison : réponse de ChatGPT vs réponse de Github Copilot
 
@@ -126,7 +121,7 @@ GitHub Copilot fournit une réponse plus structurée et pratique que ChatGPT. So
 |Pédagogie|Un peu théorique|Plus adapté à la pratique|
 |Complexité|Discussion nuancée|Approche pragmatique|
 
-**Conclusion :** Pour un travail scolaire, Copilot donne quelque chose de plus exploitable directement, car plus structuré et plus proche de l'expérience de dev.
+**Conclusion :** Pour un travail scolaire, Copilot donne quelque chose de plus exploitable directement, car il est plus structuré et plus proche de l'expérience de developpement.
 
 
 ### 2.3 LLM comparé aux moteurs de recherche
@@ -140,7 +135,7 @@ Voici les requêtes qui ont été effectuées pour valider et pour comparer avec
 
 Et ensuite fait une analyse des 5 premiers résutats de chaque requête. 
 
-Les résultats montrent une différence d'efficacité. Les IA ont réussi à synthétiser l'information immédiatement. Elles ont bien expliqué les changements techniques en filtrant les détails inutiles. À l'inverse, les résultats de Google sont très mélangés. On y trouve bien la documentation officielle, mais elle est souvent perdue au milieu d'articles de blog aux titres exagérés ou négatifs (ex: « Est-ce que Go est mort ? »), ce qui rend l'analyse plus difficile.
+Les résultats montrent une différence d'efficacité. Les IA ont réussi à résumé l'information immédiatement. Elles ont bien expliqué les changements techniques en filtrant les détails inutiles. À l'inverse, les résultats de Google sont très mélangés, on y trouve bien la documentation officielle, mais elle est parfois perdue au milieu d'articles de blog aux titres exagérés ou négatifs (ex: « Est-ce que Go est mort ? »), ce qui rend l'analyse plus difficile.
 
 Le tableau ci-dessous résume les points forts et faibles observés pour chaque méthode.
 
@@ -148,14 +143,14 @@ Le tableau ci-dessous résume les points forts et faibles observés pour chaque 
 |---|---|---|
 |Synthèse|Très bonne. Résume tout de suite les points clés.|Faible. Oblige à lire et trier plusieurs sites soi-même.|
 |Qualité du code|Utile. Donne des exemples "avant/après" clairs.|Variable. Dépend du site (très bon sur le site officiel, aléatoire sur les blogs).|
-|Neutralité|Équilibrée. Explique le pour et le contre calmement.|Biaisée. Affiche souvent des articles polémiques en premier ("clickbait").|
+|Neutralité|Équilibrée. Explique le pour et le contre calmement.|Biaisée. Affiche souvent des articles "clickbait" en premier.|
 |Rapidité|Rapide. Une réponse claire en moins de 2 minutes.|Lente. Demande 15 à 20 minutes de lecture.|
 
 
 **En conclusion,** les LLM sont excellents pour commencer une veille, mais Google reste indispensable pour vérifier les informations sur les sources officielles.
 
 
-### 2.4 Y as-t-il une page web qui contient toutes ces informations ou suffisamment proche ?
+### 2.4 Y a-t-il une page web qui contient toutes ces informations ou suffisamment proche ?
 
 En recherchant, **non**, aucune page web unique ne rassemble à la fois l'historique technique complet, les exemples de code comparatifs et l'analyse critique sur la complexité avec la même concision que le résumé généré par l'IA. L'information est fragmentée.
 Cependant, nous avons identifié deux sources officielles qui, mises bout à bout, contiennent la totalité de la vérité technique et factuelle citée précédemment.
@@ -163,7 +158,7 @@ Cependant, nous avons identifié deux sources officielles qui, mises bout à bou
 #### 1. La source technique officielle
 **Source** : Go 1.23 Release Notes (Août 2024)
  - **Lien** : https://go.dev/doc/go1.23
- - **Contenu** : C'est le document de référence pour l'année écoulée. Il officialise l'introduction des itérateurs (`range-over-func`) et l'activation de la télémétrie.
+ - **Contenu** : C'est le document de référence pour l'année écoulée. Il officialise l'introduction des itérateurs (`range-over-func` itérateurs personnalisés) et l'activation de la télémétrie.
  - **Qualité de la source** : Maximale. Cette page liste exactement ce qui est implémenté dans le compilateur. Elle prouve que le langage continue d'évoluer vers plus d'expressivité tout en complexifiant légèrement sa syntaxe interne, validant l'analyse de l'IA.
 
 #### 2. La source explicative (La justification du design)
@@ -184,7 +179,6 @@ Auusi, il est important de voir comment les développeurs utilisent vraiment les
 	* [Go 1.23 - Custom Iterators Explained](https://www.youtube.com/watch?v=iurUVx0Nquc)
   		Cette vidéo explique en profondeur l’ajout majeur de Go 1.23 : le range-over-func (itérateurs personnalisés).
 		Elle montre des exemples concrets et démontre pourquoi cette nouveauté change réellement la manière d’écrire des boucles en Go.
-		C’est la ressource la plus utile pour comprendre l’impact “révolutionnaire” dont parlent de nombreux développeurs.
 	* [Golang 1.23 - What’s New?](https://www.youtube.com/watch?v=EL4hg73mT2A)
 		Cette vidéo offre une vue d’ensemble des nouveautés de Go 1.23, avec un bon contexte sur les raisons du changement et les implications pratiques.
 		Une excellente source complémentaire qui montre comment la communauté perçoit cette mise à jour.
@@ -192,7 +186,7 @@ Auusi, il est important de voir comment les développeurs utilisent vraiment les
 - **Réseaux sociaux / communautés** :  
     - [Reddit r/golang :](https://www.reddit.com/r/golang/)
 		Discussions fréquentes sur les nouveautés du langage, dont plusieurs fils expliquant les cas d’usage des itérateurs.
-	- [Twitter/X :](https://x.com/golang)
+	- [Twitter/X :](https://x.com/golang) golang
 
 
 ### 3) Sources choisies pour les notes de cours
@@ -202,9 +196,9 @@ Pour construire mes notes de cours sur Golang, nous avons sélectionné des sour
 * [Go Documentation – Getting Started](https://go.dev/doc/) 
 
 **Utilisé pour :**
-   - Comprendre l’installation du SDK
-   - Décrire la structure d’un environnement Go (`GOROOT`, `GOPATH`)
-   - Présenter les commandes de base du workflow (`go build`, `go run`, `go test`)
+   - Comprendre **l’installation** du SDK
+   - Décrire la **structure d’un environnement** Go (`GOROOT`, `GOPATH`)
+   - Présenter les **commandes de base** du workflow (`go build`, `go run`, `go test`)
 Cette source a été essentielle pour établir la base théorique et pratique du langage.
 
 * [Go for Visual Studio Code – VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=golang.go) 
@@ -212,7 +206,7 @@ Cette source a été essentielle pour établir la base théorique et pratique du
 **Utilisé pour :**
    - Configuration de l’IDE
    - Utilisation de `gopls` (autocomplétion, diagnostics)
-   - Intégration des tests, du debugging (`dlv`) et du formattage auto
+   - Intégration des **tests**, du debugging (`dlv`) et du **formattage auto**
 Cette ressource aide à montrer un environnement de développement moderne et efficace pour les étudiants.
 
 * [Go Modules Reference](https://go.dev/doc/modules/managing-dependencies) 
@@ -220,38 +214,38 @@ Cette ressource aide à montrer un environnement de développement moderne et ef
 **Utilisé pour :**
    - Expliquer `go.mod`, `go.sum`
    - Montrer l’usage de `go mod init`, `go mod tidy`, `replace`
-   - Comprendre la gestion des versions et des dépendances
+   - Comprendre la **gestion des versions** et des **dépendances**
 Indispensable pour introduire les projets structurés en Go, puisque tout le cours repose sur les modules.
 
 * [Go Slices: Usage and Internals](https://go.dev/blog/slices-intro) 
 
 **Utilisé pour :**
-   - Expliquer le fonctionnement interne des slices
-   - Clarifier longueur, capacité et partage mémoire
+   - Expliquer le fonctionnement interne des **slices**
+   - Clarifier **longueur, capacité et partage mémoire**
    - Illustrer les implications pratiques de `append`
 Ce document m’a permis de rédiger une section claire et intuitive sur un concept souvent mal compris.
 
 * [Standard Library Overview](https://pkg.go.dev/std) 
 
 **Utilisé pour :**
-   - Introduire les packages les plus utilisés (`fmt`, `os`, `net/http`, `encoding/json`, etc.)
-   - Montrer les fonctions essentielles avec exemples simples
+   - Introduire les **packages** les plus utilisés (`fmt`, `os`, `net/http`, `encoding/json`, etc.)
+   - Montrer les **fonctions** essentielles avec exemples simples
 Base indispensable pour développer des exercices concrets.
 
 * [Effective Go](https://go.dev/doc/effective_go) 
 
 **Utilisé pour :**
-   - Présenter les conventions Go
-   - Bonnes pratiques de style, erreurs, documentation
-   - Recommandations pour écrire du code idiomatique
+   - Présenter les **conventions** Go
+   - Bonnes **pratiques** de style, erreurs, documentation
+   - Recommandations pour écrire du **code idiomatique**
 Cette source améliore la qualité du code présenté dans les notes et enseigne la philosophie Go.
 
 * [Go FAQ – Methods and Interfaces](https://go.dev/doc/faq#methods) 
 
 **Utilisé pour :**
-   - Clarifier la différence entre receivers par valeur / pointeur
-   - Expliquer le fonctionnement particulier des interfaces
-   - Donner des guidelines simples pour leur utilisation
+   - Clarifier la différence entre **receivers par valeur / pointeur**
+   - Expliquer le fonctionnement particulier des **interfaces**
+   - Donner des guidelines simples pour leur **utilisation**
 Utile pour éviter les erreurs typiques des débutants.
 
 * [Share Memory By Communicating – Go Codewalk](https://go.dev/doc/codewalk/sharemem/) 
@@ -265,7 +259,7 @@ Parfait pour aborder la concurrence propre à Go.
 * [Type Parameters Proposal and Guide](https://go.dev/doc/tutorial/generics) 
 
 **Utilisé pour :**
-   - Introduction progressive à la syntaxe
+   - Introduction progressive à la **syntaxe**
    - Exemple de fonctions paramétrées
    - Conseils pour éviter la complexité excessive
 Essentiel pour une compréhension moderne du langage depuis Go 1.18.
